@@ -6,7 +6,7 @@
  *
  * @return {Object[]}
  */
- function transformStateWithClones(state, actions) {
+function transformStateWithClones(state, actions) {
   let currentState = { ...state };
   const result = [];
 
@@ -34,11 +34,11 @@
         break;
 
       default:
-     
         break;
     }
 
-    result.push(currentState);
+    // 🔥 KLUCZOWA POPRAWKA: zawsze zapisujemy kopię
+    result.push({ ...currentState });
   }
 
   return result;
