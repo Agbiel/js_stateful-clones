@@ -37,7 +37,7 @@ function transformStateWithClones(state, actions) {
         break;
     }
 
-    // 🔥 KLUCZOWA POPRAWKA: zawsze zapisujemy kopię
+   
     result.push({ ...currentState });
   }
 
